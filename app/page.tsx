@@ -2,20 +2,22 @@ import Link from 'next/link'
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-white text-black">
       {/* Navigation */}
-      <nav className="bg-slate-800 border-b border-slate-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-sky-400">⚡ HotBus</span>
+              <span className="text-xl font-semibold text-black">
+                <span className="text-orange-600">⚡</span> HotBus
+              </span>
             </div>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center">
               <Link
                 href="/generate"
-                className="bg-sky-600 hover:bg-sky-700 px-4 py-2 rounded-lg font-medium transition-colors"
+                className="text-black hover:text-orange-600 transition-colors font-medium"
               >
-                Try it free
+                Try it
               </Link>
             </div>
           </div>
@@ -23,171 +25,118 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl lg:text-7xl font-bold tracking-tight mb-8">
-            Switchboard schematics in{' '}
-            <span className="text-sky-400">seconds</span>, not days
+      <section className="pt-20 pb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
+            Switchboard schematics in seconds
           </h1>
-          <p className="text-xl lg:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto">
-            Upload your load schedule. Get a professional single-line diagram instantly.
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto font-normal">
+            Upload a load schedule. Download a single-line diagram. No AutoCAD required.
           </p>
-          <Link
-            href="/generate"
-            className="inline-flex items-center bg-sky-600 hover:bg-sky-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-          >
-            Try it free →
-          </Link>
+          <div className="mb-12">
+            <Link
+              href="/generate"
+              className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-md text-lg font-medium transition-colors"
+            >
+              Try it free →
+            </Link>
+          </div>
+          
+          {/* Product Shot */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm">
+              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-orange-600 text-2xl">⚡</span>
+                    </div>
+                    <p className="text-gray-500 text-sm">Professional IEC 60617 schematic output</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof */}
+      <section className="py-8 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-gray-500">Built for electrical contractors, draftspeople, and MEP engineers</p>
         </div>
       </section>
 
       {/* How it Works */}
-      <section className="py-20 bg-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16">How it works</h2>
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center">
-              <div className="bg-sky-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold">1</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Upload CSV</h3>
-              <p className="text-slate-300">
-                Upload your circuit schedule in standard CSV format with load details.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-sky-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold">2</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Generate</h3>
-              <p className="text-slate-300">
-                Our engine creates a professional single-line diagram following IEC 60617 standards.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-sky-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold">3</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Download</h3>
-              <p className="text-slate-300">
-                Download your schematic as SVG or PDF. Ready for CAD or direct use.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who it&apos;s for */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16">Who it&apos;s for</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-slate-800 p-8 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4 text-sky-400">Electrical Contractors</h3>
-              <p className="text-slate-300">
-                Generate professional switchboard schematics for tenders and construction documentation.
-              </p>
-            </div>
-            <div className="bg-slate-800 p-8 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4 text-sky-400">Draftspeople</h3>
-              <p className="text-slate-300">
-                Accelerate your CAD workflow with instant, standards-compliant single-line diagrams.
-              </p>
-            </div>
-            <div className="bg-slate-800 p-8 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4 text-sky-400">MEP Engineers</h3>
-              <p className="text-slate-300">
-                Focus on design, not drafting. Generate accurate schematics from your load calculations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Value Props */}
-      <section className="py-20 bg-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16">Why HotBus?</h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="space-y-8">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-sky-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                    <span className="text-sm font-bold">⚡</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">80% faster than manual CAD</h3>
-                    <p className="text-slate-300">
-                      What takes hours in AutoCAD now takes seconds. Focus on engineering, not drafting.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-sky-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                    <span className="text-sm font-bold">📋</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">IEC 60617 compliant</h3>
-                    <p className="text-slate-300">
-                      Professional symbols and layouts that meet international standards.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-sky-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                    <span className="text-sm font-bold">💰</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">No AutoCAD license needed</h3>
-                    <p className="text-slate-300">
-                      Generate professional schematics without expensive CAD software.
-                    </p>
-                  </div>
-                </div>
+              <div className="flex items-center mb-4">
+                <span className="text-2xl font-bold text-gray-900 mr-3">1</span>
+                <h3 className="text-lg font-semibold">Upload your circuit schedule CSV</h3>
               </div>
+              <p className="text-gray-600">Standard format with load details and circuit information.</p>
             </div>
-            <div className="bg-slate-700 rounded-lg p-8">
-              <div className="aspect-video bg-slate-600 rounded-lg flex items-center justify-center">
-                <span className="text-slate-400 text-sm">Sample schematic preview</span>
+            <div>
+              <div className="flex items-center mb-4">
+                <span className="text-2xl font-bold text-gray-900 mr-3">2</span>
+                <h3 className="text-lg font-semibold">Generate an IEC 60617 compliant single-line diagram</h3>
               </div>
+              <p className="text-gray-600">Professional symbols and proper protection hierarchy.</p>
+            </div>
+            <div>
+              <div className="flex items-center mb-4">
+                <span className="text-2xl font-bold text-gray-900 mr-3">3</span>
+                <h3 className="text-lg font-semibold">Download as SVG or PDF</h3>
+              </div>
+              <p className="text-gray-600">Ready for CAD import or direct construction use.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Email Capture */}
-      <section className="py-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-8">Join the waitlist</h2>
-          <p className="text-xl text-slate-300 mb-8">
-            Get early access and updates on new features.
-          </p>
-          <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg bg-slate-700 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-sky-500"
-              required
-            />
-            <button
-              type="submit"
-              className="bg-sky-600 hover:bg-sky-700 px-6 py-3 rounded-lg font-medium transition-colors"
-            >
-              Join waitlist
-            </button>
-          </form>
+      {/* Features Section */}
+      <section className="py-20 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
+            <div>
+              <h3 className="text-xl font-semibold mb-3">Standards compliant</h3>
+              <p className="text-gray-600">IEC 60617 symbols, proper protection hierarchy</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">Every circuit type</h3>
+              <p className="text-gray-600">VSDs, DOL, star-delta, distribution boards, heaters</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">Instant output</h3>
+              <p className="text-gray-600">What takes hours in AutoCAD takes seconds</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">No software to install</h3>
+              <p className="text-gray-600">Works in your browser, outputs downloadable files</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-semibold mb-8">Ready to try?</h2>
+          <Link
+            href="/generate"
+            className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-md text-lg font-medium transition-colors"
+          >
+            Generate your first schematic →
+          </Link>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-800 border-t border-slate-700 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <span className="text-2xl font-bold text-sky-400">⚡ HotBus</span>
-          </div>
-          <p className="text-slate-400">
-            © 2025 HotBus.ai - Switchboard schematics in seconds, not days
-          </p>
+      <footer className="border-t border-gray-200 py-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-gray-500">© 2026 HotBus</p>
         </div>
       </footer>
     </div>

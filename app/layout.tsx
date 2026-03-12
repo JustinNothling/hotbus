@@ -1,20 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "HotBus - Switchboard schematics in seconds, not days",
-  description: "Upload your load schedule. Get a professional single-line diagram instantly. 80% faster than manual CAD, IEC 60617 compliant, no AutoCAD license needed.",
+  title: "HotBus - Switchboard schematics in seconds",
+  description: "Upload a load schedule. Download a single-line diagram. No AutoCAD required.",
 };
 
 export default function RootLayout({
@@ -25,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} antialiased font-sans`}
       >
         {children}
       </body>

@@ -110,18 +110,20 @@ export default function GeneratePage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-white text-black">
       {/* Navigation */}
-      <nav className="bg-slate-800 border-b border-slate-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-sky-400">⚡ HotBus</Link>
+              <Link href="/" className="text-xl font-semibold text-black">
+                <span className="text-orange-600">⚡</span> HotBus
+              </Link>
             </div>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center">
               <Link
                 href="/"
-                className="text-slate-300 hover:text-white transition-colors"
+                className="text-gray-600 hover:text-black transition-colors"
               >
                 Back to home
               </Link>
@@ -130,25 +132,25 @@ export default function GeneratePage() {
         </div>
       </nav>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">Generate Schematic</h1>
-          <p className="text-slate-300">Upload your circuit schedule to generate a professional single-line diagram.</p>
+          <h1 className="text-3xl font-bold mb-3">Generate Schematic</h1>
+          <p className="text-gray-600">Upload your circuit schedule to generate a professional single-line diagram.</p>
         </div>
 
         {/* File Upload Section */}
         <div className="grid lg:grid-cols-2 gap-8 mb-8">
           <div>
-            <h2 className="text-2xl font-semibold mb-4">Upload Circuit Schedule</h2>
+            <h2 className="text-xl font-semibold mb-4">Upload Circuit Schedule</h2>
             <div
-              className="border-2 border-dashed border-slate-600 hover:border-sky-500 rounded-lg p-8 text-center transition-colors cursor-pointer"
+              className="border-2 border-dashed border-gray-300 hover:border-orange-400 rounded-lg p-8 text-center transition-colors cursor-pointer bg-gray-50"
               onDrop={handleDrop}
               onDragOver={(e) => e.preventDefault()}
               onClick={() => fileInputRef.current?.click()}
             >
-              <div className="text-4xl text-slate-400 mb-4">📁</div>
-              <p className="text-lg mb-2">Drop your CSV file here or click to browse</p>
-              <p className="text-slate-400">Supports standard circuit schedule format</p>
+              <div className="text-4xl text-gray-400 mb-4">📁</div>
+              <p className="text-lg mb-2 font-medium">Drop your CSV file here or click to browse</p>
+              <p className="text-gray-500">Supports standard circuit schedule format</p>
             </div>
             <input
               ref={fileInputRef}
@@ -161,7 +163,7 @@ export default function GeneratePage() {
             <div className="mt-4">
               <button
                 onClick={loadSampleData}
-                className="w-full bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded-lg font-medium transition-colors"
+                className="w-full border border-gray-300 hover:border-gray-400 bg-white px-4 py-2 rounded-lg font-medium transition-colors"
               >
                 Or try with sample data
               </button>
@@ -170,27 +172,31 @@ export default function GeneratePage() {
 
           {/* Circuit Preview */}
           <div>
-            <h2 className="text-2xl font-semibold mb-4">Circuit Preview</h2>
-            <div className="bg-slate-800 rounded-lg p-4 h-64 overflow-auto">
+            <h2 className="text-xl font-semibold mb-4">Circuit Preview</h2>
+            <div className="border border-gray-200 rounded-lg bg-white">
               {circuits.length > 0 ? (
-                <div className="space-y-2">
-                  {circuits.slice(0, 8).map((circuit, index) => (
-                    <div key={index} className="text-sm">
-                      <span className="text-sky-400 font-mono">{circuit.id}</span>
-                      <span className="ml-2 text-slate-300">{circuit.description}</span>
-                      {circuit.rated_power_kw && (
-                        <span className="ml-2 text-slate-400">({circuit.rated_power_kw}kW)</span>
-                      )}
-                    </div>
-                  ))}
-                  {circuits.length > 8 && (
-                    <div className="text-slate-400 text-sm">
-                      ...and {circuits.length - 8} more circuits
-                    </div>
-                  )}
+                <div className="p-4">
+                  <div className="space-y-3">
+                    {circuits.slice(0, 8).map((circuit, index) => (
+                      <div key={index} className="flex items-center justify-between py-2 border-b border-gray-100 last:border-b-0">
+                        <div>
+                          <span className="font-mono text-sm font-medium text-gray-900">{circuit.id}</span>
+                          <p className="text-sm text-gray-600">{circuit.description}</p>
+                        </div>
+                        {circuit.rated_power_kw && (
+                          <span className="text-sm text-gray-500 font-medium">{circuit.rated_power_kw}kW</span>
+                        )}
+                      </div>
+                    ))}
+                    {circuits.length > 8 && (
+                      <div className="text-gray-500 text-sm pt-2">
+                        ...and {circuits.length - 8} more circuits
+                      </div>
+                    )}
+                  </div>
                 </div>
               ) : (
-                <div className="flex items-center justify-center h-full text-slate-400">
+                <div className="h-64 flex items-center justify-center text-gray-500">
                   Upload a CSV to preview circuits
                 </div>
               )}
@@ -200,7 +206,7 @@ export default function GeneratePage() {
               <button
                 onClick={generateSchematicDiagram}
                 disabled={isGenerating}
-                className="w-full mt-4 bg-sky-600 hover:bg-sky-700 disabled:bg-slate-600 px-6 py-3 rounded-lg font-semibold transition-colors"
+                className="w-full mt-4 bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-white px-6 py-3 rounded-lg font-medium transition-colors"
               >
                 {isGenerating ? 'Generating...' : 'Generate Schematic'}
               </button>
@@ -210,36 +216,36 @@ export default function GeneratePage() {
 
         {/* Schematic Viewer */}
         {svgContent && (
-          <div className="bg-slate-800 rounded-lg p-6">
+          <div className="border border-gray-200 rounded-lg bg-white p-6">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-semibold">Your Schematic</h2>
+              <h2 className="text-xl font-semibold">Your Schematic</h2>
               <div className="flex items-center space-x-4">
                 {/* Zoom Controls */}
                 <div className="flex items-center space-x-2">
                   <button
                     onClick={handleZoomOut}
-                    className="bg-slate-600 hover:bg-slate-500 px-3 py-1 rounded text-sm"
+                    className="border border-gray-300 hover:bg-gray-50 px-3 py-1 rounded text-sm"
                   >
-                    -
+                    −
                   </button>
-                  <span className="text-sm text-slate-300 min-w-12 text-center">
+                  <span className="text-sm text-gray-600 min-w-12 text-center">
                     {Math.round(zoom * 100)}%
                   </span>
                   <button
                     onClick={handleZoomIn}
-                    className="bg-slate-600 hover:bg-slate-500 px-3 py-1 rounded text-sm"
+                    className="border border-gray-300 hover:bg-gray-50 px-3 py-1 rounded text-sm"
                   >
                     +
                   </button>
                   <button
                     onClick={handleFitWidth}
-                    className="bg-slate-600 hover:bg-slate-500 px-3 py-1 rounded text-sm"
+                    className="border border-gray-300 hover:bg-gray-50 px-3 py-1 rounded text-sm"
                   >
                     Fit
                   </button>
                   <button
                     onClick={handleZoomReset}
-                    className="bg-slate-600 hover:bg-slate-500 px-3 py-1 rounded text-sm"
+                    className="border border-gray-300 hover:bg-gray-50 px-3 py-1 rounded text-sm"
                   >
                     1:1
                   </button>
@@ -249,13 +255,13 @@ export default function GeneratePage() {
                 <div className="flex items-center space-x-2">
                   <button
                     onClick={downloadSVG}
-                    className="bg-sky-600 hover:bg-sky-700 px-4 py-2 rounded-lg text-sm font-medium"
+                    className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-medium"
                   >
                     Download SVG
                   </button>
                   <button
                     onClick={downloadPDF}
-                    className="bg-sky-600 hover:bg-sky-700 px-4 py-2 rounded-lg text-sm font-medium"
+                    className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-medium"
                   >
                     Download PDF
                   </button>
@@ -265,7 +271,7 @@ export default function GeneratePage() {
             
             <div 
               ref={svgRef}
-              className="border border-slate-600 rounded-lg overflow-hidden bg-white"
+              className="border border-gray-200 rounded-lg overflow-hidden bg-white"
               style={{ height: '600px' }}
               onMouseDown={handleMouseDown}
               onMouseMove={handleMouseMove}
@@ -282,7 +288,7 @@ export default function GeneratePage() {
               />
             </div>
             
-            <p className="text-slate-400 text-sm mt-4">
+            <p className="text-gray-500 text-sm mt-4">
               Tip: Use mouse wheel to zoom, drag to pan, or use the controls above
             </p>
           </div>
