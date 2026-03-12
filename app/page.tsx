@@ -77,10 +77,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Who it's for */}
+      {/* Who it&apos;s for */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16">Who it's for</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">Who it&apos;s for</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-slate-800 p-8 rounded-lg">
               <h3 className="text-xl font-semibold mb-4 text-sky-400">Electrical Contractors</h3>

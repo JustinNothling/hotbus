@@ -20,6 +20,7 @@ const BUSBAR_NEUTRAL_WIDTH = "2.0"; // Neutral/earth bar
 
 // Colors (Professional Monochrome)
 const BLACK = "#000000";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const DARK_GRAY = "#1a1a1a";
 const MEDIUM_GRAY = "#666666";
 const LIGHT_GRAY = "#cccccc";
