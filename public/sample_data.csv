@@ -1,0 +1,29 @@
+Circuit ID,Description,Load Type,Rated Power (kW),Voltage (V),Phases,FLC (A),Breaker Size (A),Cable Size (mm2),Cable Type,Starter Type,Protection,BMS Interface,Duty,Notes
+MSSB-01,AHU-1 Supply Fan,Motor,30,415,3,53,63,16,4C+E Cu XLPE,VSD,MCCB + Contactor + Overload,Yes - AI/AO,Continuous,Level 1-3 supply air
+MSSB-02,AHU-1 Return Fan,Motor,18.5,415,3,33,40,10,4C+E Cu XLPE,VSD,MCCB + Contactor + Overload,Yes - AI/AO,Continuous,Level 1-3 return air
+MSSB-03,AHU-2 Supply Fan,Motor,37,415,3,65,80,25,4C+E Cu XLPE,VSD,MCCB + Contactor + Overload,Yes - AI/AO,Continuous,Level 4-6 supply air
+MSSB-04,AHU-2 Return Fan,Motor,22,415,3,39,50,10,4C+E Cu XLPE,VSD,MCCB + Contactor + Overload,Yes - AI/AO,Continuous,Level 4-6 return air
+MSSB-05,CHW Pump 1 (Duty),Motor,15,415,3,27,32,6,4C+E Cu XLPE,VSD,MCCB + Contactor + Overload,Yes - AI/AO,Continuous,Duty - paired with MSSB-06
+MSSB-06,CHW Pump 2 (Standby),Motor,15,415,3,27,32,6,4C+E Cu XLPE,VSD,MCCB + Contactor + Overload,Yes - AI/AO,Standby,Standby - paired with MSSB-05
+MSSB-07,CW Pump 1 (Duty),Motor,18.5,415,3,33,40,10,4C+E Cu XLPE,VSD,MCCB + Contactor + Overload,Yes - AI/AO,Continuous,Condenser water duty
+MSSB-08,CW Pump 2 (Standby),Motor,18.5,415,3,33,40,10,4C+E Cu XLPE,VSD,MCCB + Contactor + Overload,Yes - AI/AO,Standby,Condenser water standby
+MSSB-09,Cooling Tower Fan 1,Motor,7.5,415,3,14,16,2.5,4C+E Cu XLPE,VSD,MCCB + Contactor + Overload,Yes - AI/AO,Continuous,CT-1 fan
+MSSB-10,Cooling Tower Fan 2,Motor,7.5,415,3,14,16,2.5,4C+E Cu XLPE,VSD,MCCB + Contactor + Overload,Yes - AI/AO,Continuous,CT-2 fan
+MSSB-11,Exhaust Fan EF-01 (Carpark),Motor,11,415,3,20,25,4,4C+E Cu XLPE,DOL,MCCB + Contactor + Overload,Yes - DI/DO,Continuous,B1 carpark exhaust
+MSSB-12,Exhaust Fan EF-02 (Carpark),Motor,11,415,3,20,25,4,4C+E Cu XLPE,DOL,MCCB + Contactor + Overload,Yes - DI/DO,Continuous,B2 carpark exhaust
+MSSB-13,Smoke Exhaust Fan SEF-01,Motor,22,415,3,39,50,10,4C+E Cu XLPE,Star-Delta,MCCB + Contactor + Overload,Yes - DI/DO,Intermittent,Fire mode only - essential supply
+MSSB-14,Smoke Exhaust Fan SEF-02,Motor,22,415,3,39,50,10,4C+E Cu XLPE,Star-Delta,MCCB + Contactor + Overload,Yes - DI/DO,Intermittent,Fire mode only - essential supply
+MSSB-15,Stairwell Pressurisation Fan SPF-01,Motor,15,415,3,27,32,6,4C+E Cu XLPE,Star-Delta,MCCB + Contactor + Overload,Yes - DI/DO,Intermittent,Fire mode only - essential supply
+MSSB-16,Toilet Exhaust Fan TEF-01,Motor,3,415,3,6,10,2.5,4C+E Cu XLPE,DOL,MCB + Contactor + Overload,Yes - DI/DO,Continuous,Levels 1-6 toilet exhaust
+MSSB-17,Kitchen Exhaust Fan KEF-01,Motor,5.5,415,3,11,16,2.5,4C+E Cu XLPE,DOL,MCB + Contactor + Overload,Yes - DI/DO,Continuous,Ground floor kitchen
+MSSB-18,FCU Distribution Board DB-FCU-01,Distribution Board,12,415,3,21,25,6,4C+E Cu XLPE,N/A,MCCB,Yes - DI,Continuous,Levels 1-3 fan coil units
+MSSB-19,FCU Distribution Board DB-FCU-02,Distribution Board,12,415,3,21,25,6,4C+E Cu XLPE,N/A,MCCB,Yes - DI,Continuous,Levels 4-6 fan coil units
+MSSB-20,BMS Panel Supply,Control Panel,2,240,1,8.3,10,2.5,2C+E Cu XLPE,N/A,MCB,N/A,Continuous,Building management system
+MSSB-21,Chiller 1 Control Panel,Control Panel,1.5,240,1,6.3,10,2.5,2C+E Cu XLPE,N/A,MCB,Yes - DI,Continuous,Chiller local control
+MSSB-22,Boiler 1 (HW),Heater,36,415,3,63,80,16,4C+E Cu XLPE,Contactor,MCCB + Contactor,Yes - DI/DO,Continuous,Hot water boiler
+MSSB-23,Boiler 2 (HW Standby),Heater,36,415,3,63,80,16,4C+E Cu XLPE,Contactor,MCCB + Contactor,Yes - DI/DO,Standby,Hot water boiler standby
+MSSB-24,HW Circulation Pump,Motor,2.2,415,3,5,10,2.5,4C+E Cu XLPE,DOL,MCB + Contactor + Overload,Yes - DI/DO,Continuous,Hot water circ
+MSSB-25,Make-Up Air Unit MAU-01,Motor,11,415,3,20,25,4,4C+E Cu XLPE,VSD,MCCB + Contactor + Overload,Yes - AI/AO,Continuous,Fresh air intake
+MSSB-26,Spare,,,415,3,,32,,,,,,Spare,Future use
+MSSB-27,Spare,,,415,3,,32,,,,,,Spare,Future use
+MSSB-28,Spare,,,415,3,,25,,,,,,Spare,Future use
