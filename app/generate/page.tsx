@@ -117,9 +117,8 @@ export default function GeneratePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <Link href="/" className="flex items-center gap-2 text-xl font-semibold text-black">
-                <Image src="/logo.png" alt="HotBus" width={32} height={32} className="invert" />
-                HotBus
+              <Link href="/">
+                <Image src="/logo.png" alt="HotBus" width={48} height={48} className="invert" />
               </Link>
             </div>
             <div className="flex items-center">
