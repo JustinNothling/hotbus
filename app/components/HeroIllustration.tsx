@@ -16,19 +16,13 @@ export default function HeroIllustration() {
             <stop offset="100%" style={{ stopColor: '#000000', stopOpacity: 0 }} />
           </linearGradient>
           
-          {/* Animation for reveal effect */}
-          <mask id="revealMask">
-            <rect x="0" y="0" width="1200" height="500" fill="white">
-              <animate attributeName="width" values="0;1200" dur="3s" begin="0s" fill="freeze" />
-            </rect>
-          </mask>
+
         </defs>
         
         {/* Background */}
         <rect x="0" y="0" width="1200" height="500" fill="white" />
         
-        {/* Group with mask for animation */}
-        <g mask="url(#revealMask)">
+        <g>
           
           {/* LEFT SIDE - SPREADSHEET */}
           <g>
