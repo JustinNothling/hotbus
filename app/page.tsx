@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import HeroIllustration from './components/HeroIllustration'
 
 export default function HomePage() {
   return (
@@ -42,20 +43,9 @@ export default function HomePage() {
             </Link>
           </div>
           
-          {/* Product Shot */}
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 shadow-sm">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-orange-600 text-2xl">⚡</span>
-                    </div>
-                    <p className="text-gray-500 text-sm">Professional IEC 60617 schematic output</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* Hero Illustration */}
+          <div className="max-w-6xl mx-auto">
+            <HeroIllustration />
           </div>
         </div>
       </section>
