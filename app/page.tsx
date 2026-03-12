@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import HeroIllustration from './components/HeroIllustration'
 
 export default function HomePage() {
@@ -9,8 +10,9 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <span className="text-xl font-semibold text-black">
-                <span className="text-orange-600">⚡</span> HotBus
+              <span className="flex items-center gap-2 text-xl font-semibold text-black">
+                <Image src="/logo.png" alt="HotBus" width={32} height={32} className="invert" />
+                HotBus
               </span>
             </div>
             <div className="flex items-center">
